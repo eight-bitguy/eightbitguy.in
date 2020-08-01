@@ -7,7 +7,7 @@ orbs:
 jobs:
   build:
     description: Build static app image using gcp orb
-    machine: true
+    machine:
       environment:
         SHORT_GIT_HASH: $(echo $CIRCLE_SHA1 | cut -c -7)
     steps:
