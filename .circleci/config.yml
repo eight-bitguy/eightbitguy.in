@@ -43,6 +43,6 @@ workflows:
       - push:
           requires:
             - build
-      - deploy
+      - deploy:
           requires:
             - push
