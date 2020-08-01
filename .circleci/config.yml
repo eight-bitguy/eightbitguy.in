@@ -1,17 +1,23 @@
-version: 2.1
-
+version: 2
 jobs:
   build:
-    docker:
-      - image: us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+    machine:
+      docker_layer_caching: true
     steps:
       - checkout
-      - run: docker build -t us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1} .
+      - run:
+          docker build -t us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1} .
+          docker push andrewbestbier/ci-comparison-blog
+#    docker:
+#      - image: us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+#    steps:
+#      - checkout
+#      - run: docker build -t us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1} .
 
-  push:
-    steps:
-      - run docker push us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
-
+#  push:
+#    steps:
+#      - run docker push us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+#    working_directory: ~/app
 workflows:
   version: 2
   build_and_push:
