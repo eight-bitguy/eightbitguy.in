@@ -22,7 +22,7 @@ jobs:
       - gcp-gke/install
       - gcp-gke/init
       - gcp-gke/rollout-image:
-          deployment: eightbitguy.in
+          deployment: eightbitguy-website-cluster-1
           container: ui-app
           image: gcr.io/eightbitguy-website/eightbitguy-${CIRCLE_BRANCH}-$(echo $CIRCLE_SHA1 | cut -c -7)
 
