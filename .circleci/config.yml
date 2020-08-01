@@ -24,7 +24,7 @@ jobs:
       - gcp-gke/rollout-image:
           deployment: eightbitguy-in-website
           container: eightbitguy-website-1
-          image: us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+          image: gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
 
 workflows:
   version: 2
