@@ -13,22 +13,10 @@ jobs:
       - gcr/build-image:
           image: eightbitguy-${CIRCLE_BRANCH}-$(echo $CIRCLE_SHA1 | cut -c -7)
           tag: latest
-
-
-  push:
-    description: Push docker image to google container registry
-    machine: true
-    steps:
       - gcr/gcr-auth
       - gcr/push-image:
           image: eightbitguy-${CIRCLE_BRANCH}-$(echo $CIRCLE_SHA1 | cut -c -7)
           tag: latest
-
-
-  deploy:
-    description: Deploy application to Google Kubernetes Engine
-    machine: true
-    steps:
       - gcp-gke/install
       - gcp-gke/init
       - gcp-gke/rollout-image:
@@ -36,15 +24,9 @@ jobs:
           container: ui-app
           deployment: eightbitguy.in
           image: gcr.io/eightbitguy-website/eightbitguy-${CIRCLE_BRANCH}-$(echo $CIRCLE_SHA1 | cut -c -7)
-#
+
 workflows:
   version: 2.1
   build_and_deploy:
     jobs:
       - build
-      - push:
-          requires:
-            - build
-      - deploy:
-          requires:
-            - push
