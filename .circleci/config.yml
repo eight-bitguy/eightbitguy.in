@@ -12,9 +12,9 @@ jobs:
       - checkout
       - gcr/gcr-auth
       - gcr/build-image:
-          image: us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+          image: eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
       - gcr/push-image:
-          image: us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+          image: eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
   deploy:
     description: Deploy application to Google Kubernetes Engine
     machine: true
@@ -24,7 +24,7 @@ jobs:
       - gcp-gke/rollout-image:
           deployment: eightbitguy-in-website
           container: eightbitguy-website-1
-          image: eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+          image: us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
 
 workflows:
   version: 2
