@@ -22,8 +22,8 @@ jobs:
       - gcp-gke/install
       - gcp-gke/init
       - gcp-gke/rollout-image:
-          deployment: eightbitguy-website-cluster-1
-          container: eightbitguy-in-website
+          deployment: eightbitguy-in-website
+          container: eightbitguy-website-1
           image: us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
 
 workflows:
