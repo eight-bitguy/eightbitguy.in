@@ -10,7 +10,7 @@ jobs:
     machine: true
     steps:
       - checkout
-      - echo "$GCLOUD_SERVICE_KEY"
+      - echo $GCLOUD_SERVICE_KEY
       - gcr/gcr-auth
       - gcr/build-image:
           image: us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
