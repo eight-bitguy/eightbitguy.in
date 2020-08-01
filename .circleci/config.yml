@@ -1,14 +1,35 @@
 version: 2
+
+orbs:
+  gcp-gke: circleci/gcp-gke@0.1.0
+  gcr: circleci/gcp-gcr@0.0.2
+
 jobs:
   build:
+    description: Build static app image using gcp orb
     machine: true
     steps:
       - checkout
-      - run: docker build -t us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1} .
-      - run: docker push us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+      - gcr/gcr-auth
+      - gcr/build-image:
+          image: us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+      - gcr/push-image:
+          image: us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
+  deploy:
+    description: Deploy application to Google Kubernetes Engine
+    machine: true
+    steps:
+      - gcp-gke/install
+      - gcp-gke/init
+      - gcp-gke/rollout-image:
+          deployment: eightbitguy-website-cluster-1
+          container: dominic-backend
+          image: us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
 
 workflows:
-  version: 2
-  build_and_push:
+  build_and_deploy:
     jobs:
       - build
+      - deploy:
+          requires:
+            - build
