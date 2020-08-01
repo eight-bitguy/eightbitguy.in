@@ -2,26 +2,26 @@ version: 2.1
 
 orbs:
   gcp-gke: circleci/gcp-gke@0.2.0
-  gcr: circleci/gcp-gcr@0.0.2
+  gcr: circleci/gcp-gcr@0.8
 
 jobs:
-#  build:
-#    description: Build static app image using gcp orb
-#    machine: true
-#    steps:
-#      - checkout
-#      - gcr/build-image:
-#          image: eightbitguy-${CIRCLE_BRANCH}-$(echo $CIRCLE_SHA1 | cut -c -7)
-#
-#
-#  push:
-#    description: Push docker image to google container registry
-#    machine: true
-#    steps:
-#      - gcr/push-image:
-#          image: eightbitguy-${CIRCLE_BRANCH}-$(echo $CIRCLE_SHA1 | cut -c -7)
-#
-#
+  build:
+    description: Build static app image using gcp orb
+    machine: true
+    steps:
+      - checkout
+      - gcr/build-image:
+          image: eightbitguy-${CIRCLE_BRANCH}-$(echo $CIRCLE_SHA1 | cut -c -7)
+
+
+  push:
+    description: Push docker image to google container registry
+    machine: true
+    steps:
+      - gcr/push-image:
+          image: eightbitguy-${CIRCLE_BRANCH}-$(echo $CIRCLE_SHA1 | cut -c -7)
+
+
   deploy:
     description: Deploy application to Google Kubernetes Engine
     machine: true
@@ -40,16 +40,17 @@ workflows:
   build_and_deploy:
     jobs:
 #      - build
-#      - gcp-gke/publish-and-rollout-image:
+      - gcp-gke/publish-and-rollout-image:
 #          requires:
 #            - build
-#          container: ui-app
-#          deployment: eightbitguy.in
-#          image: eightbitguy-${CIRCLE_BRANCH}-$(echo ${CIRCLE_SHA1} | cut -c -7)
+          cluster: eightbitguy-website-cluster-1
+          container: ui-app
+          deployment: eightbitguy.in
+          image: eightbitguy-${CIRCLE_BRANCH}-$(echo ${CIRCLE_SHA1} | cut -c -7)
 #      - push:
 #          requires:
 #            - build
-      - deploy
+#      - deploy
 #          requires:
 #            - build
 #            - push
