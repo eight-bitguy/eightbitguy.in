@@ -23,7 +23,7 @@ jobs:
       - gcp-gke/init
       - gcp-gke/rollout-image:
           deployment: eightbitguy-website-cluster-1
-          container: dominic-backend
+          container: eightbitguy-in-website
           image: us.gcr.io/eightbitguy-website/eightbitguy-website-${CIRCLE_BRANCH}-${CIRCLE_SHA1}
 
 workflows:
