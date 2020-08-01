@@ -8,8 +8,8 @@ jobs:
   build:
     description: Build static app image using gcp orb
     machine: true
-    environment:
-      SHORT_GIT_HASH: $(echo $CIRCLE_SHA1 | cut -c -7)
+      environment:
+        SHORT_GIT_HASH: $(echo $CIRCLE_SHA1 | cut -c -7)
     steps:
       - checkout
       - gcr/gcr-auth
