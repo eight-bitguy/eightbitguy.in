@@ -5,7 +5,7 @@ const App = () => {
     return (
         <div className="app">
             Shanu Jain is awesome
-            <ParticlesBg type="lines" bg={true}/>
+            {/*<ParticlesBg type="lines" bg={true}/>*/}
         </div>
     );
 };
