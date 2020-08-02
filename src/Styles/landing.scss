@@ -1,40 +1,44 @@
 @import "variables";
 
 .landing {
-  //height: 100vw;
-  //width: 100vw;
-  //display: flex;
-  //overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .heading {
-    margin-top: 3%;
-    padding-top: 10%;
-    margin-left: 5%;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .line-1 {
-    margin-left: 20px;
-    font-family: $font-1, cursive;
-    color: white;
-    font-size: 30px;
+    font-family: $font-3, cursive;
+    color: black;
+    font-size: 20px;
     margin-bottom: 0;
   }
 
   .line-2 {
-    font-family: $font-1, cursive;
-    color: white;
+    font-family: $font-3, cursive;
+    color: black;
     font-size: 100px;
     margin-top: 0;
   }
 
   .line-3 {
-    margin-left: 20px;
     font-family: $font-3, cursive;
-    color: #ff4080;
+    color: $primary-color;
     font-size: 30px;
-    margin-bottom: 0;
+    font-weight: bold;
+  }
+
+  .image-div {
+    margin: 20px 0;
+    height: 260px;
+    border-radius: 300px;
+    overflow: hidden;
+    width: 260px;
+    border: 3px solid $primary-color;
   }
 
 }

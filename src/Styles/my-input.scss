@@ -1,0 +1,20 @@
+@import "variables";
+
+.my-input {
+  .label {
+    font-weight: bold;
+    color: $primary-color;
+    font-family: $font-3, cursive;
+    margin-bottom: 3px;
+  }
+
+  .input {
+    font-size: 25px;
+    outline: none;
+    font-family: $font-3, cursive;
+    height: 27px;
+    width: 290px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+  }
+}
