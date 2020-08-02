@@ -19,7 +19,7 @@ const Landing = (props) => {
             </div>
             <div className='landing' id='background-div'>
                 <div className='image-div'>
-                    <img src={require('./../Images/circle-cropped.png')} height='270px' alt='sandal Jain'/>
+                    <img src={require('./../Images/sandal.png')} height='270px' alt='sandal Jain'/>
                 </div>
                 <div className='heading'>
                     <div className='line-2'>Sandal Jain</div>
