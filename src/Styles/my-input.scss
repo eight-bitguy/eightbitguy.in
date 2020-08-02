@@ -4,14 +4,14 @@
   .label {
     font-weight: bold;
     color: $primary-color;
-    font-family: $font-3, cursive;
+    font-family: $primary-font, cursive;
     margin-bottom: 3px;
   }
 
   .input {
     font-size: 25px;
     outline: none;
-    font-family: $font-3, cursive;
+    font-family: $primary-font, cursive;
     height: 27px;
     width: 290px;
     padding-bottom: 5px;
