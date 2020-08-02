@@ -1,13 +1,15 @@
-import React, {useCallback, useState} from 'react';
+import React from 'preact/compat';
+import {useCallback, useState} from 'preact/hooks';
 import MyInput from "../Components/MyInput";
 import TextArea from "../Components/TextArea";
 import MyButton from "../Components/MyButton";
+import { route } from 'preact-router';
 import Url from "../JS/Url";
 
-const RenderHeader = (history) => {
+const RenderHeader = () => {
     const onClick = useCallback(() => {
-        history.push(Url.HOME)
-    }, [history]);
+        route(Url.HOME)
+    }, []);
 
     return (
         <div className='header'>
@@ -18,14 +20,14 @@ const RenderHeader = (history) => {
     );
 };
 
-const Contact = (props) => {
+const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     return (
         <div>
             <div>
-                {RenderHeader(props.history)}
+                {RenderHeader()}
             </div>
             <div className='contact'>
                 <div className='row-1'>

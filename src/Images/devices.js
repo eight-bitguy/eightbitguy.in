@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 
 const Device = () => (
 <svg width="650px" height="265px" viewBox="0 0 650 265">

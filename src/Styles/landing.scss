@@ -39,6 +39,9 @@
     overflow: hidden;
     width: 260px;
     border: 3px solid $primary-color;
+    .image {
+      height: 270px;
+    }
   }
 
 }

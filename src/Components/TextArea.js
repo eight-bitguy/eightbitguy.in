@@ -1,4 +1,5 @@
-import React, {useCallback} from 'react';
+import React from 'preact/compat';
+import {useCallback} from 'preact/hooks';
 
 const TextArea = (props) => {
     const onChange = useCallback((e) => {
