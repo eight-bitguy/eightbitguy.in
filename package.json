@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@welldone-software/why-did-you-render": "^4.2.7",
     "node-sass": "^4.14.1",
     "node-sass-chokidar": "^1.5.0",
     "react": "^16.13.1",
