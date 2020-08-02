@@ -1,0 +1,40 @@
+@import "variables";
+
+.landing {
+  //height: 100vw;
+  //width: 100vw;
+  //display: flex;
+  //overflow: auto;
+
+  .heading {
+    margin-top: 3%;
+    padding-top: 10%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .line-1 {
+    margin-left: 20px;
+    font-family: $font-1, cursive;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  .line-2 {
+    font-family: $font-1, cursive;
+    color: white;
+    font-size: 100px;
+    margin-top: 0;
+  }
+
+  .line-3 {
+    margin-left: 20px;
+    font-family: $font-3, cursive;
+    color: #ff4080;
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+}
