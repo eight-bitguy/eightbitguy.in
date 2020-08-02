@@ -20,7 +20,7 @@ const Landing = () => {
             </div>
             <div className='landing' id='background-div'>
                 <div className='image-div'>
-                    <img src={require('./../Images/sandal.png')} className='image' alt='sandal Jain'/>
+                    <img src={require('./../Images/sandal.jpg')} className='image' alt='sandal Jain'/>
                 </div>
                 <div className='heading'>
                     <div className='line-2'>Sandal Jain</div>
