@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media (max-width: 768px) {
+    .landing {
+      margin-top: 15%; } }
   .landing .heading {
     display: flex;
     flex-direction: column;
@@ -16,11 +19,17 @@
     color: black;
     font-size: 100px;
     margin-top: 0; }
+    @media (max-width: 768px) {
+      .landing .line-2 {
+        font-size: 60px; } }
   .landing .line-3 {
     font-family: "Poiret One", cursive;
     color: #25b862;
     font-size: 30px;
     font-weight: bold; }
+    @media (max-width: 768px) {
+      .landing .line-3 {
+        font-size: 20px; } }
   .landing .image-div {
     margin: 20px 0;
     height: 260px;
@@ -28,5 +37,12 @@
     overflow: hidden;
     width: 260px;
     border: 3px solid #25b862; }
+    @media (max-width: 768px) {
+      .landing .image-div {
+        height: 120px;
+        width: 120px; } }
     .landing .image-div .image {
       height: 270px; }
+      @media (max-width: 768px) {
+        .landing .image-div .image {
+          height: 120px; } }

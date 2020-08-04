@@ -10,13 +10,9 @@ const Landing = () => {
     }, []);
 
     return (
-        <div>
-            <div>
-                <div className='header'>
-                    <div>
-                        <MyButton label='Get in touch' onClick={onClick}/>
-                    </div>
-                </div>
+        <div className='landing-container'>
+            <div className='header'>
+                <MyButton label='Get in touch' onClick={onClick}/>
             </div>
             <div className='landing' id='background-div'>
                 <div className='image-div'>
