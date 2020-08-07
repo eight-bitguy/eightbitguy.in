@@ -39,13 +39,13 @@
     border: 10px solid #25b862; }
     @media (max-width: 768px) {
       .landing-container .landing .image-div {
-        height: 120px;
-        width: 120px; } }
+        height: 200px;
+        width: 200px; } }
     .landing-container .landing .image-div .image {
       height: 260px; }
       @media (max-width: 768px) {
         .landing-container .landing .image-div .image {
-          height: 120px; } }
+          height: 200px; } }
 
 .landing-container .header {
   justify-content: flex-end; }

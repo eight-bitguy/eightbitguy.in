@@ -54,15 +54,15 @@
       width: 260px;
       border: 10px solid $primary-color;
       @include screen-sm {
-        height: 120px;
-        width: 120px;
+        height: 200px;
+        width: 200px;
       }
 
       .image {
         height: 260px;
 
         @include screen-sm {
-          height: 120px;
+          height: 200px;
         }
       }
     }
