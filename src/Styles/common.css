@@ -1,0 +1,12 @@
+.back-button {
+  fill: #25b862;
+  cursor: pointer;
+  border-radius: 30px;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex; }
+  .back-button:hover {
+    background-color: #25b862;
+    fill: white; }

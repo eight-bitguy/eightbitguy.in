@@ -5,6 +5,7 @@ import { route } from 'preact-router';
 import Url from "../JS/Url";
 
 const Landing = () => {
+    console.log(process.env);
     const onClick = useCallback(() => {
         route(Url.CONTACT)
     }, []);

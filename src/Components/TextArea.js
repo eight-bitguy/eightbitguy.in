@@ -4,7 +4,7 @@ import {useCallback} from 'preact/hooks';
 const TextArea = (props) => {
     const onChange = useCallback((e) => {
         props.onChange(e.target.value)
-    }, [props]);
+    }, []);
 
     return (
         <div className='my-input'>

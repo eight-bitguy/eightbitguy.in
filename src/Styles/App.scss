@@ -1,9 +1,12 @@
+@import "variables";
 @import "fonts.css";
 @import "landing.css";
 @import "my-button.css";
 @import "my-input.css";
 @import "contact.css";
 @import "header.css";
+@import "common.css";
+@import "thanks.css";
 
 body {
   margin: 0;
@@ -21,4 +24,23 @@ code {
 
 .app {
   display: flex;
+}
+
+.loader {
+  border: 3px solid #f2f2f2;
+  border-radius: 50%;
+  border-top: 3px solid $primary-color;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

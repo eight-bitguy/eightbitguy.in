@@ -7,4 +7,8 @@ export default class Url {
     static get CONTACT() {
         return '/contact';
     }
+
+    static get THANKS() {
+        return '/thanks';
+    }
 }

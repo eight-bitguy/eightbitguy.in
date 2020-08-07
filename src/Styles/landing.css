@@ -1,48 +1,51 @@
-.landing {
+.landing-container .landing {
   display: flex;
   flex-direction: column;
   align-items: center; }
   @media (max-width: 768px) {
-    .landing {
+    .landing-container .landing {
       margin-top: 15%; } }
-  .landing .heading {
+  .landing-container .landing .heading {
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .landing .line-1 {
+  .landing-container .landing .line-1 {
     font-family: "Poiret One", cursive;
     color: black;
     font-size: 20px;
     margin-bottom: 0; }
-  .landing .line-2 {
+  .landing-container .landing .line-2 {
     font-family: "Poiret One", cursive;
     color: black;
     font-size: 100px;
     margin-top: 0; }
     @media (max-width: 768px) {
-      .landing .line-2 {
+      .landing-container .landing .line-2 {
         font-size: 60px; } }
-  .landing .line-3 {
+  .landing-container .landing .line-3 {
     font-family: "Poiret One", cursive;
     color: #25b862;
     font-size: 30px;
     font-weight: bold; }
     @media (max-width: 768px) {
-      .landing .line-3 {
+      .landing-container .landing .line-3 {
         font-size: 20px; } }
-  .landing .image-div {
+  .landing-container .landing .image-div {
     margin: 20px 0;
     height: 260px;
     border-radius: 300px;
     overflow: hidden;
     width: 260px;
-    border: 3px solid #25b862; }
+    border: 10px solid #25b862; }
     @media (max-width: 768px) {
-      .landing .image-div {
+      .landing-container .landing .image-div {
         height: 120px;
         width: 120px; } }
-    .landing .image-div .image {
-      height: 270px; }
+    .landing-container .landing .image-div .image {
+      height: 260px; }
       @media (max-width: 768px) {
-        .landing .image-div .image {
+        .landing-container .landing .image-div .image {
           height: 120px; } }
+
+.landing-container .header {
+  justify-content: flex-end; }

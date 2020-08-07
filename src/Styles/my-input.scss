@@ -6,6 +6,7 @@
     color: $primary-color;
     font-family: $primary-font, cursive;
     margin-bottom: 3px;
+    margin-left: 3px;
   }
 
   .input {
@@ -14,7 +15,10 @@
     font-family: $primary-font, cursive;
     height: 27px;
     width: 290px;
-    padding-bottom: 5px;
-    padding-left: 10px;
+    padding: 3px;
+  }
+
+  textarea {
+    resize: vertical;
   }
 }

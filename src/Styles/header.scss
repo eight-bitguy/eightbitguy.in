@@ -1,6 +1,12 @@
+@import "mixin";
+
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin: 20px;
+
+  @include screen-sm {
+
+  }
 }

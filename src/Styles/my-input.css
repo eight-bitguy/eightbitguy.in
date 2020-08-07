@@ -2,7 +2,8 @@
   font-weight: bold;
   color: #25b862;
   font-family: "Poiret One", cursive;
-  margin-bottom: 3px; }
+  margin-bottom: 3px;
+  margin-left: 3px; }
 
 .my-input .input {
   font-size: 25px;
@@ -10,5 +11,7 @@
   font-family: "Poiret One", cursive;
   height: 27px;
   width: 290px;
-  padding-bottom: 5px;
-  padding-left: 10px; }
+  padding: 3px; }
+
+.my-input textarea {
+  resize: vertical; }
