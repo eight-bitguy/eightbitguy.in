@@ -10,6 +10,7 @@
 
 # production
 /build
+/public/env_config.js
 .idea
 # misc
 .DS_Store

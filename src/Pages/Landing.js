@@ -1,25 +1,22 @@
-import React, {useCallback} from 'react';
+import React from 'preact/compat';
+import {useCallback} from 'preact/hooks';
+import { route } from 'preact-router';
 import MyButton from "../Components/MyButton";
 import Url from "../JS/Url";
 
-const Landing = (props) => {
+const Landing = () => {
     const onClick = useCallback(() => {
-        props.history.push(Url.CONTACT)
-    }, [props]);
+        route(Url.CONTACT)
+    }, []);
 
-    console.log('landing');
     return (
-        <div>
-            <div>
-                <div className='header'>
-                    <div>
-                        <MyButton label='Get in touch' onClick={onClick}/>
-                    </div>
-                </div>
+        <div className='landing-container'>
+            <div className='header'>
+                <MyButton label='Get in touch' onClick={onClick}/>
             </div>
             <div className='landing' id='background-div'>
                 <div className='image-div'>
-                    <img src={require('./../Images/sandal.png')} height='270px' alt='sandal Jain'/>
+                    <img src={require('./../Images/sandal.jpg')} className='image' alt='sandal Jain'/>
                 </div>
                 <div className='heading'>
                     <div className='line-2'>Sandal Jain</div>

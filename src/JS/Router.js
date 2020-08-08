@@ -1,22 +1,19 @@
-import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import React from 'preact/compat';
+import Router from 'preact-router';
 import Url from './Url';
 import Landing from "../Pages/Landing";
 import Contact from "../Pages/Contact";
+import Thanks from "../Pages/Thanks";
 
 
-const Router = () => {
+const MyRouter = () => {
     return (
-        <BrowserRouter>
-            <main>
-                <Switch>
-                    <Route exact path={Url.HOME} component={Landing} />
-                    <Route exact path={Url.CONTACT} component={Contact} />
-                </Switch>
-            </main>
-        </BrowserRouter>
-
+        <Router>
+            <Landing path={Url.HOME} />
+            <Contact path={Url.CONTACT} />
+            <Thanks path={Url.THANKS} />
+        </Router>
     );
 };
 
-export default Router;
+export default MyRouter;

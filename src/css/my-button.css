@@ -1,0 +1,1 @@
+.my-button{display:flex;justify-content:center;flex-direction:column;align-items:center;padding-bottom:5px;width:150px;height:50px;border:1px solid #25b862;border-radius:30px;background-color:white;font-size:20px;font-family:"Poiret One",cursive;font-weight:bold;color:#25b862;outline:none}.my-button:hover{cursor:pointer;background-color:#25b862 !important;color:white}

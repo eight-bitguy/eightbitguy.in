@@ -1,0 +1,19 @@
+@import "variables";
+
+.back-button {
+  fill: $primary-color;
+  cursor: pointer;
+  border-radius: 30px;
+
+
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  &:hover {
+    background-color: $primary-color;
+    fill: white;
+  }
+}

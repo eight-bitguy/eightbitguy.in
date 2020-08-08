@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'preact/compat';
 
 const MyButton = (props) => {
     return (
         <button className='my-button' onClick={props.onClick}>
-            {props.label}
+            {props.loading ? <div className='loader' /> : props.label}
         </button>
     );
 };

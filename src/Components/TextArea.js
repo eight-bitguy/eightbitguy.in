@@ -1,16 +1,17 @@
-import React, {useCallback} from 'react';
+import React from 'preact/compat';
+import {useCallback} from 'preact/hooks';
 
-const TextArea = (props) => {
-    const onChange = useCallback((e) => {
-        props.onChange(e.target.value)
-    }, [props]);
+const TextArea = ({onChange, label, value}) => {
+    const localOnChange = useCallback((e) => {
+        onChange(e.target.value)
+    }, [onChange]);
 
     return (
         <div className='my-input'>
             <div className='label'>
-                {props.label}
+                {label}
             </div>
-            <textarea className='input' onChange={onChange} cols="10" rows="20" value={props.value}/>
+            <textarea className='input' onChange={localOnChange} cols="10" rows="20" value={value}/>
         </div>
     );
 };
