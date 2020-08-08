@@ -1,12 +1,6 @@
 import emailJs from 'emailjs-com';
 
-const SERVICE_ID = 'sandalj6_gmail_com';
-const TEMPLATE_ID = 'template_qOacbz7E';
-const USER_ID = 'user_wzCrSBH9l8Ag8Yeai6xtp';
-
 class EmailHelper {
-
-
     constructor(name, email, message) {
         this.name = name;
         this.email = email;
@@ -20,7 +14,12 @@ class EmailHelper {
             message: this.message
         };
         try {
-            await emailJs.send(SERVICE_ID, TEMPLATE_ID, data, USER_ID).then();
+            await emailJs.send(
+                window._env_.EMAIL_SERVICE_ID,
+                window._env_.EMAIL_TEMPLATE_ID,
+                data,
+                window._env_.EMAIL_USER_ID
+            ).then();
         } catch (e) {
             console.log(e);
         }
