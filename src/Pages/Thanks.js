@@ -1,6 +1,6 @@
 import React from 'preact/compat';
-import BackButton from "../Images/backbutton";
 import {route} from "preact-router";
+import BackButton from "../Images/backbutton";
 import Url from "../JS/Url";
 
 const onClick = () => {

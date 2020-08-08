@@ -1,5 +1,5 @@
 import React, { render } from 'preact/compat';
-import './Styles/App.css';
+import './index.css';
 import Router from "./JS/Router";
 
 render(

@@ -5,15 +5,22 @@
   "dependencies": {
     "emailjs-com": "^2.6.3",
     "node-sass": "^4.14.1",
-    "node-sass-chokidar": "^1.5.0",
     "preact": "^10.4.6",
     "preact-router": "^3.2.1",
     "react-scripts": "3.4.1"
   },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "onchange": "^7.0.2",
+    "parallelshell": "^3.0.2"
+  },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/"
+    "build:js": "react-scripts build",
+    "build:css": "node-sass --output-style compressed -o src/css src/scss",
+    "build:all": "npm run build:css && npm run build:js",
+    "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
+    "watch:all": "parallelshell 'npm start' 'npm run watch:css'"
   },
   "browserslist": {
     "production": [

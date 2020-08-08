@@ -4,11 +4,11 @@ WORKDIR /app
 
 COPY package*.json /app/
 
-RUN yarn install
+RUN yarn install --production
 
 COPY ./ /app/
 
-RUN yarn build
+RUN yarn build:all
 
 FROM nginx:1.15
 

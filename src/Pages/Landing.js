@@ -1,11 +1,12 @@
 import React from 'preact/compat';
 import {useCallback} from 'preact/hooks';
-import MyButton from "../Components/MyButton";
 import { route } from 'preact-router';
+import MyButton from "../Components/MyButton";
 import Url from "../JS/Url";
 
 const Landing = () => {
     console.log(process.env);
+
     const onClick = useCallback(() => {
         route(Url.CONTACT)
     }, []);
