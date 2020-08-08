@@ -5,7 +5,7 @@ import MyButton from "../Components/MyButton";
 import Url from "../JS/Url";
 
 const Landing = () => {
-    console.log(process.env);
+    console.log(window._env_);
 
     const onClick = useCallback(() => {
         route(Url.CONTACT)
