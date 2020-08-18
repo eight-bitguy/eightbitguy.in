@@ -38,3 +38,32 @@ code {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+
+.router {
+  background-image: url("./../Images/noise.png");
+}
+
+.line-container {
+  margin: 20px 30px 20px 30px;
+  display: flex;
+  align-items: center;
+
+  .line {
+    width: 100vw;
+    height: 1px;
+    background-color: $primary-color;
+  }
+}
+
+.padding-top-20 {
+  padding-top: 20vh;
+}
+
+.padding-top-30 {
+  padding-top: 30vh;
+}
+
+.react-icon {
+  fill: $primary-color;
+}

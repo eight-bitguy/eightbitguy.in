@@ -1,0 +1,21 @@
+@import "variables";
+
+.card {
+  height: 200px;
+  width: 200px;
+  border: 1px solid $primary-color;
+  margin-top: 10px;
+
+  .label {
+    font-family: $primary-font;
+    text-align: center;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .icon {
+    text-align: center;
+  }
+}

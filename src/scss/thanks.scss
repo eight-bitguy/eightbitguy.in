@@ -2,7 +2,8 @@
 @import "mixin";
 
 .thanks-container {
-  margin-top: 10%;
+  //padding-top: 10%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

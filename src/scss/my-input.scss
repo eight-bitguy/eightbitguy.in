@@ -10,7 +10,10 @@
   }
 
   .input {
+    border: 1px solid $primary-color;
+    background: inherit;
     font-size: 25px;
+    color: $primary-color;
     outline: none;
     font-family: $primary-font, cursive;
     height: 27px;

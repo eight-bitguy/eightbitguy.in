@@ -2,6 +2,8 @@
 @import "mixin";
 
 .landing-container {
+  padding-bottom: 20vh;
+
   .landing {
     display: flex;
     flex-direction: column;
@@ -25,7 +27,7 @@
 
     .line-2 {
       font-family: $primary-font, cursive;
-      color: black;
+      color: $primary-color;
       font-size: 100px;
       margin-top: 0;
 
@@ -58,7 +60,7 @@
         width: 200px;
       }
 
-      .image {
+      .my-image {
         height: 260px;
 
         @include screen-sm {
@@ -72,6 +74,6 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin: 20px;
+    padding: 20px;
   }
 }
