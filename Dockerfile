@@ -2,14 +2,13 @@ FROM node:14 as app-savepoint
 
 WORKDIR /app
 
-COPY package.json /app/
-COPY yarn.lock /app/
+COPY package*.json ./
 
-RUN yarn install --production
+RUN npm install
 
 COPY ./ /app/
 
-RUN yarn build:all
+RUN npm run build:all
 
 FROM nginx:1.19.1-alpine
 
