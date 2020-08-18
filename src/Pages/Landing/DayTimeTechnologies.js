@@ -16,7 +16,7 @@ const DayTimeTechnologies = () => {
             <div className='row-1'>
                 <Card label='Laravel' getIcon={LaravelIcon}/>
                 <Card label='Docker' getIcon={DockerIcon}/>
-                <Card label='Posgres' getIcon={DockerIcon}/>
+                <Card label='Postgres' getIcon={DockerIcon}/>
             </div>
         </div>
     );
