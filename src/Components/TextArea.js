@@ -1,10 +1,10 @@
 import React from 'preact/compat';
-import {useCallback} from 'preact/hooks';
 
 const TextArea = ({onChange, label, value}) => {
-    const localOnChange = useCallback((e) => {
+
+    const localOnChange = (e) => {
         onChange(e.target.value)
-    }, [onChange]);
+    };
 
     return (
         <div className='my-input'>

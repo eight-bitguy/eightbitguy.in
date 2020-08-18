@@ -1,10 +1,10 @@
 import React from 'preact/compat';
-import {useCallback} from 'preact/hooks';
 
 const MyInput = ({onChange, value, label}) => {
-    const localOnChange = useCallback((e) => {
+
+    const localOnChange = (e) => {
         onChange(e.target.value)
-    }, [onChange]);
+    };
 
     return (
         <div className='my-input'>
