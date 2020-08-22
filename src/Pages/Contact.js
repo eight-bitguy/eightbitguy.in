@@ -9,19 +9,33 @@ import Url from "../JS/Url";
 import EmailHelper from "../JS/emailHelper";
 import Message from "../Models/Message";
 
+/**
+ *
+ */
 const onClick = () => {
     route(Url.HOME)
 };
 
+/**
+ * @returns {*}
+ * @constructor
+ */
 const Contact = () => {
     const [messageInfo, _setMessageInfo] = useState(new Message());
     const [loading, setLoading] = useState(false);
 
+    /**
+     * @param attribute
+     * @param value
+     */
     const setMessageInfo = (attribute, value) => {
         messageInfo.set(attribute, value);
         _setMessageInfo(messageInfo);
     };
 
+    /**
+     * @returns {Promise<void>}
+     */
     const onSubmit = async () => {
         if (loading || !messageInfo.validate()) {
             return;

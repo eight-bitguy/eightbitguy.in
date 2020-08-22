@@ -7,7 +7,7 @@ export default class Message {
     name = null;
 
     set(attribute, value) {
-        this[arguments] = value;
+        this[attribute] = value;
     }
 
     validate() {
