@@ -1,23 +1,30 @@
 import emailJs from 'emailjs-com';
 
+/**
+ * Email helper class
+ */
 class EmailHelper {
-    constructor(name, email, message) {
-        this.name = name;
-        this.email = email;
-        this.message = message;
+
+    /**
+     * Constructor
+     *
+     * @param messageInfo
+     */
+    constructor(messageInfo) {
+        this.messageInfo = messageInfo;
     }
 
+    /**
+     * send email
+     *
+     * @returns {Promise<void>}
+     */
     async sendEmail() {
-        const data = {
-            name: this.name,
-            email: this.email,
-            message: this.message
-        };
         try {
             await emailJs.send(
                 window._env_.EMAIL_SERVICE_ID,
                 window._env_.EMAIL_TEMPLATE_ID,
-                data,
+                this.messageInfo.toJson(),
                 window._env_.EMAIL_USER_ID
             ).then();
         } catch (e) {

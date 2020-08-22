@@ -7,6 +7,8 @@
     font-family: $primary-font, cursive;
     margin-bottom: 3px;
     margin-left: 3px;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .input {
@@ -19,6 +21,7 @@
     height: 27px;
     width: 290px;
     padding: 3px;
+    font-weight: bold;
   }
 
   textarea {

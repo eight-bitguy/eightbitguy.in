@@ -7,23 +7,27 @@ import MyButton from "../Components/MyButton";
 import BackButton from "../Images/backbutton";
 import Url from "../JS/Url";
 import EmailHelper from "../JS/emailHelper";
+import Message from "../Models/Message";
 
 const onClick = () => {
     route(Url.HOME)
 };
 
 const Contact = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+    const [messageInfo, _setMessageInfo] = useState(new Message());
     const [loading, setLoading] = useState(false);
 
+    const setMessageInfo = (attribute, value) => {
+        messageInfo.set(attribute, value);
+        _setMessageInfo(messageInfo);
+    };
+
     const onSubmit = async () => {
-        if (loading) {
+        if (loading || !messageInfo.validate()) {
             return;
         }
 
-        const emailHelper = new EmailHelper(name, email, message);
+        const emailHelper = new EmailHelper(messageInfo);
         setLoading(true);
         await emailHelper.sendEmail();
         setLoading(false);
@@ -39,11 +43,11 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className='row-1'>
-                    <MyInput label='Name' onChange={setName} value={name}/>
-                    <MyInput label='Email' onChange={setEmail} value={email}/>
+                    <MyInput label='Name' name='name' onChange={setMessageInfo} value={messageInfo.get('name')}/>
+                    <MyInput label='Email' name='email' onChange={setMessageInfo} value={messageInfo.get('email')}/>
                 </div>
                 <div className='row-2'>
-                    <TextArea label='Message' onChange={setMessage} value={message}/>
+                    <TextArea label='Message' name='message' onChange={setMessageInfo} value={messageInfo.get('message')}/>
                 </div>
                 <div className='row-3'>
                     <MyButton label='Submit' onClick={onSubmit} loading={loading}/>

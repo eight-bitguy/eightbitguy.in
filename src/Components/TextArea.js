@@ -1,9 +1,9 @@
 import React from 'preact/compat';
 
-const TextArea = ({onChange, label, value}) => {
+const TextArea = ({onChange, label, value, name}) => {
 
     const localOnChange = (e) => {
-        onChange(e.target.value)
+        onChange(name, e.target.value)
     };
 
     return (
@@ -11,7 +11,7 @@ const TextArea = ({onChange, label, value}) => {
             <div className='label'>
                 {label}
             </div>
-            <textarea className='input' onChange={localOnChange} cols="10" rows="20" value={value}/>
+            <textarea className='input' onChange={localOnChange} cols="10" rows="20" value={value} name={name} />
         </div>
     );
 };

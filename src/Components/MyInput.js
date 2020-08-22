@@ -1,9 +1,9 @@
 import React from 'preact/compat';
 
-const MyInput = ({onChange, value, label}) => {
+const MyInput = ({onChange, value, label, name}) => {
 
     const localOnChange = (e) => {
-        onChange(e.target.value)
+        onChange(name, e.target.value)
     };
 
     return (
@@ -11,7 +11,7 @@ const MyInput = ({onChange, value, label}) => {
             <div className='label'>
                 {label}
             </div>
-            <input className='input' onChange={localOnChange} value={value}/>
+            <input className='input' onChange={localOnChange} value={value} />
         </div>
     );
 };
