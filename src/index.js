@@ -1,10 +1,10 @@
 import React, { render } from 'preact/compat';
-import './index.css';
-import Router from "./JS/Router";
 
 render(
   <React.StrictMode>
-    <Router />
+      <div>
+          This VM's Hostname is - {window._env_.hostname}
+      </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
