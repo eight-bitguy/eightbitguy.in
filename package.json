@@ -3,16 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "emailjs-com": "^2.6.3",
-    "node-sass": "^4.14.1",
-    "preact": "^10.4.6",
-    "preact-router": "^3.2.1",
-    "react-scripts": "3.4.1"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "onchange": "^7.0.2",
-    "parallelshell": "^3.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
