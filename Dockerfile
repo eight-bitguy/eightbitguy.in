@@ -16,7 +16,7 @@ RUN apk add --no-cache bash
 
 COPY --from=app-savepoint /app/build/ /usr/share/nginx/html
 
-COPY --from=app-savepoint /app/Docker/bin/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=app-savepoint /app/Docker/bin/nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=app-savepoint /app/Docker/env.sh /usr/share/nginx/html
 
