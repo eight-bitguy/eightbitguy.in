@@ -1,6 +1,6 @@
 #!/bin/bash
 
-> /usr/share/nginx/html/env-config.js
+> /usr/share/nginx/html/env_config.js
 env >> .env
 echo "window._env_ = {" >> /usr/share/nginx/html/env_config.js
 
