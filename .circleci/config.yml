@@ -29,7 +29,7 @@ jobs:
           cluster: eightbitguy
           container: website-ui
           deployment: website-ui-app-deployment
-          image: gcr.io/my-cluster-290007/eightbitguy-${CIRCLE_BRANCH}-$(echo $CIRCLE_SHA1 | cut -c -7)
+          image: gcr.io/website-ui/eightbitguy-${CIRCLE_BRANCH}-$(echo $CIRCLE_SHA1 | cut -c -7)
 
 
 workflows:
