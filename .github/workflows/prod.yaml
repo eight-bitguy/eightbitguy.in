@@ -1,0 +1,53 @@
+name: staging
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-test-deploy:
+    name: Build, Test & Deploy
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    env:
+      EMAIL_SERVICE_ID: ${{ secrets.EMAIL_SERVICE_ID }}
+      EMAIL_TEMPLATE_ID: ${{ secrets.EMAIL_TEMPLATE_ID }}
+      EMAIL_USER_ID: ${{ secrets.EMAIL_USER_ID }}
+    steps:
+      - name: Check-out repo..
+        uses: actions/checkout@v2
+
+      - name: Using node.js ${{ matrix.node-version }}..
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Installing dependencies..
+        run: npm install
+
+      - name: Inject env variables in to the build..
+        run: echo "BASE_API_URL=${{ secrets.STAGING_BASE_API_URL }}" >> .env.production
+
+      - name: build
+        run: npm run build
+
+      - name: Injecting AWS creds..
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Deploying
+        run: aws s3 sync public/ s3://${{secrets.BUCKET_NAME}} --acl public-read
+
+#      - name: Invalidate
+#        uses: chetan/invalidate-cloudfront-action@master
+#        env:
+#          DISTRIBUTION: ${{ secrets.STAGING_DISTRIBUTION }}
+#          PATHS: '/*'
+#          AWS_REGION: ${{ secrets.AWS_REGION }}
+#          AWS_ACCESS_KEY_ID: ${{ secrets.STAGING_AWS_ACCESS_KEY_ID }}
+#          AWS_SECRET_ACCESS_KEY: ${{ secrets.STAGING_AWS_SECRET_ACCESS_KEY }}

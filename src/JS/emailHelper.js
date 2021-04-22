@@ -22,10 +22,10 @@ class EmailHelper {
     async sendEmail() {
         try {
             await emailJs.send(
-                window._env_.EMAIL_SERVICE_ID,
-                window._env_.EMAIL_TEMPLATE_ID,
+                process.env.EMAIL_SERVICE_ID,
+                process.env.EMAIL_TEMPLATE_ID,
                 this.messageInfo.toJson(),
-                window._env_.EMAIL_USER_ID
+                process.env.EMAIL_USER_ID
             ).then();
         } catch (e) {
             console.log(e);
