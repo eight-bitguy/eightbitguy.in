@@ -31,7 +31,7 @@ jobs:
         run: echo "BASE_API_URL=${{ secrets.STAGING_BASE_API_URL }}" >> .env.production
 
       - name: build
-        run: npm run build
+        run: npm run build:all
 
       - name: Injecting AWS creds..
         uses: aws-actions/configure-aws-credentials@v1
