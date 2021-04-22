@@ -28,7 +28,7 @@ jobs:
         run: npm install
 
       - name: Inject env variables in to the build..
-        run: echo "BASE_API_URL=${{ secrets.STAGING_BASE_API_URL }}" >> .env.production
+        run: echo ${{ secrets.BUCKET_NAME }}
 
       - name: build
         run: npm run build:all
