@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [14.x]
     env:
       EMAIL_SERVICE_ID: ${{ secrets.EMAIL_SERVICE_ID }}
       EMAIL_TEMPLATE_ID: ${{ secrets.EMAIL_TEMPLATE_ID }}
