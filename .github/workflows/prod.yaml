@@ -40,11 +40,12 @@ jobs:
       - name: Deploying
         run: aws s3 sync build/ s3://${{secrets.PRODUCTION_BUCKET_NAME}} --acl public-read
 
-#      - name: Invalidate
-#        uses: chetan/invalidate-cloudfront-action@master
-#        env:
-#          DISTRIBUTION: ${{ secrets.STAGING_DISTRIBUTION }}
-#          PATHS: '/*'
-#          AWS_REGION: ${{ secrets.AWS_REGION }}
-#          AWS_ACCESS_KEY_ID: ${{ secrets.STAGING_AWS_ACCESS_KEY_ID }}
-#          AWS_SECRET_ACCESS_KEY: ${{ secrets.STAGING_AWS_SECRET_ACCESS_KEY }}
+      - name: Invalidate
+        uses: chetan/invalidate-cloudfront-action@master
+        env:
+          DISTRIBUTION: ${{ secrets.PRODUCTION_DISTRIBUTION }}
+          PATHS: '/*'
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.STAGING_AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.STAGING_AWS_SECRET_ACCESS_KEY }}
+g
