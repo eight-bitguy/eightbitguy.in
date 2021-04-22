@@ -48,4 +48,4 @@ jobs:
         run: aws s3 sync build/ s3://${{secrets.STAGING_BUCKET_NAME}} --acl public-read
 
       - name: Invalidate
-        uses: aws cloudfront create-invalidation --distribution-id=${{secrets.STAGING_DISTRIBUTION}} --paths '/*'
+        run: aws cloudfront create-invalidation --distribution-id=${{secrets.STAGING_DISTRIBUTION}} --paths '/*'
