@@ -28,11 +28,11 @@ jobs:
         run: npm install
 
       - name: Inject env variables in to the build..
-        run: echo REACT_APP_EMAIL_SERVICE_ID=${{ secrets.EMAIL_SERVICE_ID }} >> .env
+        run: echo "REACT_APP_EMAIL_SERVICE_ID=${{ secrets.EMAIL_SERVICE_ID }}" >> .env
       - name: Inject env variables in to the build..
-        run: REACT_APP_EMAIL_TEMPLATE_ID=${{ secrets.EMAIL_TEMPLATE_ID }} >> .env
+        run: echo "REACT_APP_EMAIL_TEMPLATE_ID=${{ secrets.EMAIL_TEMPLATE_ID }}" >> .env
       - name: Inject env variables in to the build..
-        run: REACT_APP_EMAIL_USER_ID=${{ secrets.EMAIL_USER_ID }}" >> .env >> .env
+        run: echo "REACT_APP_EMAIL_USER_ID=${{ secrets.EMAIL_USER_ID }}" >> .env
 
       - name: build
         run: npm run build:all
@@ -48,10 +48,4 @@ jobs:
         run: aws s3 sync build/ s3://${{secrets.STAGING_BUCKET_NAME}} --acl public-read
 
       - name: Invalidate
-        uses: chetan/invalidate-cloudfront-action@master
-        env:
-          DISTRIBUTION: ${{ secrets.STAGING_DISTRIBUTION }}
-          PATHS: '/*'
-          AWS_REGION: ${{ secrets.AWS_REGION }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}g
+        uses: aws cloudfront create-invalidation --distribution-id ${{ secrets.STAGING_DISTRIBUTION }} --paths /*
