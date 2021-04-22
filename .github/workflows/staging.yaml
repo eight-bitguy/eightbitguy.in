@@ -28,8 +28,8 @@ jobs:
         run: npm install
 
       - name: Inject env variables in to the build..
-        run: echo "REACT_APP_EMAIL_SERVICE_ID=${{ secrets.EMAIL_SERVICE_ID }}
-        REACT_APP_EMAIL_TEMPLATE_ID=${{ secrets.EMAIL_TEMPLATE_ID }}
+        run: echo "REACT_APP_EMAIL_SERVICE_ID=${{ secrets.EMAIL_SERVICE_ID }}\
+        REACT_APP_EMAIL_TEMPLATE_ID=${{ secrets.EMAIL_TEMPLATE_ID }}\
         REACT_APP_EMAIL_USER_ID=${{ secrets.EMAIL_USER_ID }}" >> .env
 
       - name: build
