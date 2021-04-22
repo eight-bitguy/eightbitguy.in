@@ -27,9 +27,6 @@ jobs:
       - name: Installing dependencies..
         run: npm install
 
-      - name: Inject env variables in to the build..
-        run: echo ${{ secrets.BUCKET_NAME }}
-
       - name: build
         run: npm run build:all
 
@@ -41,7 +38,7 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
 
       - name: Deploying
-        run: aws s3 sync public/ s3://${{secrets.BUCKET_NAME}} --acl public-read
+        run: aws s3 sync public/ s3://${{secrets.PRODUCTION_BUCKET_NAME}} --acl public-read
 
 #      - name: Invalidate
 #        uses: chetan/invalidate-cloudfront-action@master
