@@ -23,10 +23,10 @@ class EmailHelper {
         console.log(process.env);
         try {
             await emailJs.send(
-                process.env.EMAIL_SERVICE_ID,
-                process.env.EMAIL_TEMPLATE_ID,
+                process.env.REACT_APP_EMAIL_SERVICE_ID,
+                process.env.REACT_APP_EMAIL_TEMPLATE_ID,
                 this.messageInfo.toJson(),
-                process.env.EMAIL_USER_ID
+                process.env.REACT_APP_EMAIL_USER_ID
             ).then();
         } catch (e) {
             console.log(e);
