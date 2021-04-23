@@ -17,7 +17,7 @@ const Landing = () => {
             </div>
             <div className='landing' id='background-div'>
                 <div className='image-div'>
-                    <img src={require('../../Images/sandal.jpg')} className='my-image' alt='sandal Jain'/>
+                    <img rel="preload" src={require('../../Images/sandal.jpg')} className='my-image' alt='sandal Jain'/>
                 </div>
                 <div className='heading'>
                     <div className='line-2'>Sandal Jain</div>
