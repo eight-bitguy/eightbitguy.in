@@ -18,7 +18,17 @@
   }
 }
 
+.download-resume-button-container {
+  color: $primary-color;
+  text-decoration: none !important;
+  a, span {
+    color: $primary-color;
+    text-decoration: none !important;
+  }
+}
+
 .download-resume-button {
+  color: $primary-color;
   display: flex;
   flex-direction: row;
   align-items: center;
