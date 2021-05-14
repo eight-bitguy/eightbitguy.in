@@ -1,9 +1,9 @@
 import React from 'preact/compat';
 
-const Line = () => {
+const Line = (props) => {
     return (
         <div className='line-container'>
-            <div className='line'/>
+            <div className={`line-${props.width ?? '100' }`}/>
         </div>
     );
 };

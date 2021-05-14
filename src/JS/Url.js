@@ -11,4 +11,8 @@ export default class Url {
     static get THANKS() {
         return '/thanks';
     }
+
+    static get RESUME() {
+        return '/resume';
+    }
 }

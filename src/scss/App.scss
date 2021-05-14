@@ -21,7 +21,7 @@ code {
 }
 
 .loader {
-  border: 3px solid #f2f2f2;
+  border: 3px solid #1f1f1f;
   border-radius: 50%;
   border-top: 3px solid $primary-color;
   width: 20px;
@@ -49,8 +49,14 @@ code {
   display: flex;
   align-items: center;
 
-  .line {
+  .line-100 {
     width: 100vw;
+    height: 1px;
+    background-color: $primary-color;
+  }
+
+  .line-50 {
+    width: 50vw;
     height: 1px;
     background-color: $primary-color;
   }
