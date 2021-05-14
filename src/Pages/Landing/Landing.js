@@ -21,7 +21,7 @@ const Landing = () => {
                 </div>
                 <div className='heading'>
                     <div className='line-2'>Sandal Jain</div>
-                    <div className='line-3'>Developer | DevOps</div>
+                    <div className='line-3'>full-stack | acm-icpc | curious</div>
                 </div>
             </div>
             <div className='padding-top-30'>

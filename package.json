@@ -12,7 +12,7 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "onchange": "^7.0.2",
-    "parallelshell": "^3.0.2"
+    "parallelshell": "3.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
