@@ -21,9 +21,22 @@
 .download-resume-button-container {
   color: $primary-color;
   text-decoration: none !important;
+
   a, span {
     color: $primary-color;
     text-decoration: none !important;
+  }
+
+  svg {
+    fill: #ff7f02;
+  }
+  &:hover {
+    .download-resume-button {
+      color: white;
+    }
+    svg {
+      fill: white;
+    }
   }
 }
 
@@ -33,15 +46,6 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
-
-  svg {
-    fill: #ff7f02;
-  }
-  &:hover {
-    svg {
-      fill: white;
-    }
-  }
 }
 
 
