@@ -1,6 +1,5 @@
 import React from 'preact/compat';
 import Card from "../../Components/Card";
-import DockerIcon from "../../Images/DockerIcon";
 import GithubIcon from "../../Images/GithubIcon";
 import CircuitIcon from "../../Images/circuitIcon";
 
