@@ -20,7 +20,6 @@ class EmailHelper {
      * @returns {Promise<void>}
      */
     async sendEmail() {
-        console.log(process.env);
         try {
             await emailJs.send(
                 process.env.REACT_APP_EMAIL_SERVICE_ID,

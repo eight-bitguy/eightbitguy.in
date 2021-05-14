@@ -18,22 +18,20 @@
   }
 }
 
-.download-button {
-  border: 1px solid $primary-color;
-  fill: $primary-color;
-  cursor: pointer;
-  border-radius: 80px;
-
-
-  height: 80px;
-  width: 80px;
-  align-items: center;
-  justify-content: center;
+.download-resume-button {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 
+  svg {
+    fill: #ff7f02;
+  }
   &:hover {
-    background-color: $primary-color;
-    fill: white;
-
+    svg {
+      fill: white;
+    }
   }
 }
+
+

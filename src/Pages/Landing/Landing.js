@@ -5,6 +5,7 @@ import Url from "../../JS/Url";
 import DayTimeTechnologies from "./DayTimeTechnologies";
 import NightTimeExplorer from "./NightTimeExplorer";
 import Line from "../../Components/line";
+import DownLoadResume from "../../Components/DownloadResume";
 
 const toContact = () => route(Url.CONTACT);
 const toResume = () => route(Url.RESUME);
@@ -13,7 +14,7 @@ const Landing = () => {
     return (
         <div className='landing-container'>
             <div className='header'>
-                <MyButton label='Resume' onClick={toResume}/>
+                <DownLoadResume label='Resume' onClick={toResume}/>
                 <MyButton label='Get in touch' onClick={toContact}/>
             </div>
             <div className='landing' id='background-div'>
