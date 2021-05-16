@@ -4,7 +4,7 @@ import DownloadIcon from "../Images/DownloadIcon";
 const DownLoadResume = () => {
     return (
             <div className="download-resume-button-container">
-                <button className='my-button' id='download_resume_button'>
+                <button className='my-button'>
                     <a type="button" href='./Sandal_Jain.pdf' download>
                         <div className='download-resume-button'>
                             <DownloadIcon /> Resume
