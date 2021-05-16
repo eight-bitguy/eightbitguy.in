@@ -6,6 +6,7 @@ import DayTimeTechnologies from "./DayTimeTechnologies";
 import NightTimeExplorer from "./NightTimeExplorer";
 import Line from "../../Components/line";
 import DownLoadResume from "../../Components/DownloadResume";
+import Typist from "../../Components/Typist";
 
 const toContact = () => route(Url.CONTACT);
 const toResume = () => route(Url.RESUME);
@@ -23,11 +24,13 @@ const Landing = () => {
                         rel="preload"
                         src={require('../../Images/sandal.jpg')}
                         className='my-image'
-                        alt='sandal Jain'
+                        alt='संदल जैन'
                     />
                 </div>
                 <div className='heading'>
-                    <div className='line-2'>Sandal Jain</div>
+                    <div className='line-2'>
+                        <Typist label="Sandal Jain" alternateText="संदल जैन"/>
+                    </div>
                     <div className='line-3'>3 years | full-stack | acm-icpc | curious</div>
                 </div>
             </div>
