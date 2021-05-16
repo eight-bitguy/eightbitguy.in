@@ -47,6 +47,18 @@
       }
     }
 
+    .line-4 {
+      font-family: $primary-font, cursive;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $primary-color;
+      font-size: 30px;
+      font-weight: bold;
+      gap: 10px;
+      margin: 6px;
+    }
+
     .image-div {
 
       margin: 20px 0;

@@ -3,8 +3,8 @@ import Card from "../../Components/Card";
 import ReactIcon from "../../Images/ReactIcon";
 import LaravelIcon from "../../Images/LaravelIcon";
 import DockerIcon from "../../Images/DockerIcon";
-import JavascriptIcon from "../../Images/javascriptIcon";
-import SpeedIcon from "../../Images/speedIcon";
+import JavascriptIcon from "../../Images/JavascriptIcon";
+import SpeedIcon from "../../Images/SpeedIcon";
 
 const DayTimeTechnologies = () => {
     return (

@@ -1,7 +1,7 @@
 import React from 'preact/compat';
 import Card from "../../Components/Card";
 import GithubIcon from "../../Images/GithubIcon";
-import CircuitIcon from "../../Images/circuitIcon";
+import CircuitIcon from "../../Images/CircuitIcon";
 
 const NightTimeExplorer = () => {
     return (

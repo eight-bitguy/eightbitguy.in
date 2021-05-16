@@ -7,6 +7,10 @@ import NightTimeExplorer from "./NightTimeExplorer";
 import Line from "../../Components/line";
 import DownLoadResume from "../../Components/DownloadResume";
 import Typist from "../../Components/Typist";
+import InstagramIcon from "../../Images/InstagramIcon";
+import LinkedInIcon from "../../Images/LinkedInIcon";
+import CodeChefIcon from "../../Images/CodeChefIcon";
+import AcmIcpcIcon from "../../Images/AcmIcpcIcon";
 
 const toContact = () => route(Url.CONTACT);
 const toResume = () => route(Url.RESUME);
@@ -32,6 +36,9 @@ const Landing = () => {
                         <Typist label="Sandal Jain" alternateText="संदल जैन"/>
                     </div>
                     <div className='line-3'>3 years | full-stack | acm-icpc | curious</div>
+                    <div className='line-4'>
+                        <LinkedInIcon/>  | <InstagramIcon/> | <CodeChefIcon/> | <AcmIcpcIcon/>
+                    </div>
                 </div>
             </div>
             <div className='padding-top-30'>
