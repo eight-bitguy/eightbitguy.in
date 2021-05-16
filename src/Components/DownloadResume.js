@@ -5,7 +5,7 @@ const DownLoadResume = () => {
     return (
             <div className="download-resume-button-container">
                 <button className='my-button'>
-                    <a type="button" href='./Sandal_Jain.pdf' download>
+                    <a id='download_resume_button' type="button" href='./Sandal_Jain.pdf' download>
                         <div className='download-resume-button'>
                             <DownloadIcon /> Resume
                         </div>
