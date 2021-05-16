@@ -4,7 +4,7 @@ import {route} from "preact-router";
 import MyInput from "../Components/MyInput";
 import TextArea from "../Components/TextArea";
 import MyButton from "../Components/MyButton";
-import BackButton from "../Images/backbutton";
+import BackButton from "../Images/BackButton";
 import Url from "../JS/Url";
 import EmailHelper from "../JS/emailHelper";
 import Message from "../Models/Message";
