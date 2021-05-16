@@ -4,8 +4,8 @@ import {useEffect, useState} from "preact/hooks";
 const Typist = (props) => {
 
     const INITIAL_DELAY = 1000;
-    const TYPING_DELAY = 200;
-    const BLINKING_CURSOR_DELAY = 500;
+    const TYPING_DELAY = 100;
+    const BLINKING_CURSOR_DELAY = 400;
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isIncreasing, setIsIncreasing] = useState(true);
@@ -37,16 +37,16 @@ const Typist = (props) => {
         }
     };
 
-    const updateBlinkingCursor = () => {
-        setBlinkCursor(!blinkCursor);
-    };
-
     useEffect(() => {
         const timer = setTimeout(changeInitialDelay, INITIAL_DELAY);
         return () => { clearTimeout(timer) };
     }, []);
 
     useEffect(() => {
+        const updateBlinkingCursor = () => {
+            setBlinkCursor(!blinkCursor);
+        };
+
         const timer = setTimeout(updateBlinkingCursor, BLINKING_CURSOR_DELAY);
         return () => { clearTimeout(timer) };
     }, [blinkCursor]);

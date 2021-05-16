@@ -24,7 +24,7 @@ const Landing = () => {
                         rel="preload"
                         src={require('../../Images/sandal.jpg')}
                         className='my-image'
-                        alt='संदल जैन'
+                        alt='Sandal Jain'
                     />
                 </div>
                 <div className='heading'>
