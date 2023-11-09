@@ -35,7 +35,7 @@ const Landing = () => {
                     <div className='line-2'>
                         <Typist label="Sandal Jain" alternateText="संदल जैन"/>
                     </div>
-                    <div className='line-3'>3 years | full-stack | acm-icpc | curious</div>
+                    <div className='line-3'>5 years | full-stack | acm-icpc | curious</div>
                     <div className='line-4'>
                         <LinkedInIcon/>  | <InstagramIcon/> | <CodeChefIcon/> | <AcmIcpcIcon/>
                     </div>
